@@ -1988,45 +1988,6 @@ function _e(e) {
 
 const de = { 2: 200, 3: 400, 4: 600, 5: 800 };
 
-const ze = {
-  10: 'Một sự xuất hiện tình cờ không đúng lúc — lý do nảy sinh tự nhiên từ bối cảnh hiện tại, bản thân hắn cũng không nghĩ nhiều, hoàn toàn là đời thường',
-  20: 'Sự quan tâm thuận miệng biến thành một cái nhìn thuận đường — lý do vẫn là vô tình đời thường, nhưng trước khi rời đi hắn đã dừng lại thêm nửa giây',
-  30: 'Cảm giác sai sai khó tả khiến hắn mượn cớ đi qua một vòng — bản thân cái cớ không quan trọng, ánh mắt hắn đã dừng lại trong phòng một chút',
-  40: 'Hắn bắt đầu xác minh — dùng một lý do hợp lý trong hoàn cảnh này để tiếp cận, ánh mắt rơi vào các chi tiết (trang phục/khoảng cách/thần thái), dừng lại lâu hơn bình thường',
-  50: 'Lần đầu tiên tiếp cận có mục đích — bước chân nhẹ đi, nghe ngóng một lúc rồi mới lên tiếng, thời điểm xuất hiện là đã được chọn lọc',
-  60: 'Cắt ngang mang tính thăm dò — dùng một câu hỏi để phá cửa, câu hỏi hướng đến điểm đáng ngờ mà hắn quan tâm nhất lúc này; vào rồi không vội đi, quan sát phản ứng',
-  70: 'Xuất hiện vào thời điểm không nên xuất hiện — lặng lẽ quay lại hoặc về sớm, cảnh báo chỉ có trong nháy mắt',
-  80: 'Gần như là rình rập — hắn chọn thời điểm dễ bắt gặp chuyện mờ ám nhất, xuất hiện vừa nhanh vừa im lặng, trên mặt không có nụ cười',
-  90: 'Xuất hiện mang theo sự nghi ngờ gần như chắc chắn — không gõ cửa, đi thẳng vào, ánh mắt đầu tiên là tìm kiếm bằng chứng'
-},
-$e = {
-  1: 'Trải đệm — Góc nhìn của hắn dạo gần đây và cảm giác sai sai ban đầu (Tài liệu lấy từ những thay đổi thực sự xảy ra trong ngữ cảnh: trang phục/thói quen/thần thái/sinh hoạt của cô ấy, chọn thứ mà hắn với tư cách là chồng dễ chú ý nhất)',
-  2: 'Lên men — Những dấu vết hắn có thể tiếp xúc trong ngữ cảnh xâu chuỗi lại trong lòng hắn, sự tự giải thích bắt đầu không đứng vững, hắn quyết định đi xem thử',
-  3: 'Thu lưới — Đi về phía cánh cửa đó; kết thúc bằng khoảnh khắc hắn đẩy cửa cắt ngang (Cùng thời điểm với cảnh bị cắt ngang trong tuyến chính, nhìn từ đôi mắt của hắn)'
-};
-
-function me(e, t) {
-  const n = e['Hệ thống']['Góc nhìn Tô Văn'];
-  return n['Số tầng còn lại'] > 0 || n['Mức độ'] > 0 && n['Tầng xử lý lần trước'] >= 0 && n['Tầng xử lý lần trước'] === t;
-}
-
-function he(e, t) {
-  return t >= 90 ? `  🔥 Sự nghi ngờ của hắn đối với ${e} sắp bùng nổ: Âm trầm lạnh nhạt, âm thầm lục lọi, chạm vào là nổ` : t >= 60 ? `  ⚠⚠ Hắn rõ ràng đã nghi ngờ ${e}: Tra hỏi nhiều hơn, để ý tung tích và điện thoại của cô ấy, không khí trong nhà căng thẳng` : t >= 30 ? `  ⚠ Hắn có chút nghi ngờ ${e}: Sẽ nhìn thêm vài lần, tra hỏi như vô tình, nhưng vẫn sẵn sàng tin tưởng người nhà` : null;
-}
-
-function be(e) {
-  const t = ['Tần Lộ', 'Tô Mộng'].filter(t => e['Hệ thống']['Nhân vật có mặt'][t]);
-  return t.length > 0 ? [...t] : ['Tần Lộ'];
-}
-
-const ge = {
-  1: 'Ảnh hưởng của ý niệm/thói quen đã liệt kê chỉ thể hiện ở bên trong (mất tập trung/đỏ mặt/ánh mắt dừng lại/giấc mơ/quan tâm hắn hơn một chút một cách khó hiểu), khi không có ý niệm thì nội tâm cô ấy hoàn toàn là đời thường. Cấm: Chủ động nói chuyện tình dục hoặc cơ thể (bị nhắc đến sẽ hoảng hốt lảng tránh), tiếp xúc thân thể chủ động vượt quá mức bình thường của mẹ/chị gái, bất kỳ hành động chủ động mang tính mập mờ nào. Giới hạn chấp nhận: Giới hạn ở mức tiếp xúc bình thường của người nhà (đưa đồ, vô tình chạm) — những ý đồ thân mật từ nắm tay trở lên tuyệt đối không xảy ra.',
-  2: 'Cho phép bị động tiếp nhận chủ đề nhạy cảm, nói ra khỏi miệng mới giật mình nhận ra nghĩa bóng. Cấm: Từ ngữ lộ liễu, chủ động tạo tiếp xúc cơ thể (tiếp xúc ngắn ngủi thuận theo tình thế thì được, sau đó sẽ hoảng hốt), lời mời gọi có tính chất rõ ràng. Giới hạn chấp nhận: Gần gũi cơ thể ở ranh giới mập mờ (sóng vai, nép vào, ôm ngắn ngủi thuận theo tình thế) và những nụ hôn ngắn ngủi, sau đó có thể viện cớ là bốc đồng nhất thời — nụ hôn sâu say đắm, thân mật cơ thể trở lên sẽ không xảy ra.',
-  3: 'Cho phép chủ đề mang tính ám chỉ khi ở riêng, chủ động tạo cơ hội gần gũi, có bậc thang là thuận nước đẩy thuyền. Cấm: Vượt rào trước mặt người khác, lời mời gọi tình dục thẳng thừng (nhưng có thể "không từ chối"). Giới hạn chấp nhận: Hôn, vuốt ve mập mờ qua lớp quần áo — tiếp xúc cơ thể dưới lớp quần áo và hành vi chịch nhau sẽ không xảy ra (cô ấy có thể dao động, có thể bị trêu chọc đến thất thần, nhưng hành động không vượt quá giới hạn).',
-  4: 'Khi ở riêng gần như giải phóng toàn bộ — sẽ nói thẳng dục vọng và chủ động hành động. Cấm: Bất kỳ sự vượt rào nào trong phạm vi Tô Văn có thể nhận biết (đây là quản lý rủi ro, không phải đạo đức). Giới hạn chấp nhận: Giải phóng hành vi chịch nhau khi ở riêng (giữ lại chút dư âm của sự xấu hổ và trái luân thường đạo lý) — trong phạm vi Tô Văn có thể nhận biết vẫn sẽ không xảy ra chuyện gì.',
-  5: 'Không có vùng cấm. Sự kiềm chế chỉ xuất hiện khi cần ngụy trang, và đó là màn biểu diễn mà cô ấy tận hưởng. Giới hạn chấp nhận: Không có.'
-};
-
 function pe(e, t) {
   if (e['Hệ thống']['Kết cục xấu']) {
     const t = e['Hệ thống']['Kết cục xấu'];
